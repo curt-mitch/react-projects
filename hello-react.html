@@ -11,16 +11,38 @@
 		<div id="content"></div>
 		<script type="text/jsx">
 			/** @jsx React.DOM */
-			//tutorial1.js
 			var commentBox = React.createClass({
 				render: function() {
 					return (
 						<div className="commentBox">
-							Hello, world! I am a commentBox.
+							<h1>Comments</h1>
+							<commentList />
+							<commentForm />
 						</div>
 					);
 				}
 			});
+
+			var commentList = React.createClass({
+				render: function() {
+					return (
+						<div className="commentList">
+							Hello, world! I am a commentList.
+						</div>
+					);
+				}
+			});
+
+			var commentForm = React.createClass({
+				render: function() {
+					return (
+						<div className="commentForm">
+							Hello, world! I am a commentForm.
+						</div>
+					);
+				}
+			});
+
 			React.renderComponent(
 				<commentBox />,
 				document.getElementById('content')
