@@ -41,8 +41,8 @@
 						}.bind(this)
 					});
 				},
-				handleCommentSubmit: function() {
-					var comment = this.state.data;
+				handleCommentSubmit: function(comment) {
+					var comments = this.state.data;
 					var newComments = comments.concat([comment]);
 					this.setState({data: newComments});
 					$.ajax({
